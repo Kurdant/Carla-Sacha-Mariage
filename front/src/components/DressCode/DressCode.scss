@@ -1,0 +1,81 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.dress-code-section {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  background-color: $color-sage;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-lg $spacing-md;
+
+  &__container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  &__title {
+    color: $color-parchment;
+    margin-bottom: $spacing-md;
+  }
+
+  &__text {
+    color: $color-parchment;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: $spacing-lg;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include respond-to(tablet) {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-md;
+  max-width: 400px;
+  margin: 0 auto;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 600px;
+    gap: $spacing-sm;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid $color-white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include respond-to(tablet) {
+      width: 70px;
+      height: 70px;
+    }
+
+    @include respond-to(desktop) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}

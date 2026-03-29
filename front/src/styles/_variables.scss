@@ -1,0 +1,93 @@
+$bg-parchment: #F1EAD8;
+$bg-sand: #D5C7AD;
+$bg-olive: #BEC5A4;
+$bg-sage: #8A8E75;
+$bg-bark: #68604D;
+$bg-olivewood: #2D2F22;
+$bg-white: #FFFFFF;
+
+$text-on-dark: #FFFFFF;
+$text-on-light: #2D2F22;
+$text-accent: #C9A86A;
+
+$gold-primary: #C9A86A;
+$gold-secondary: #D4BC8E;
+$gold-light: rgba(201,168,106,0.3);
+
+$color-parchment: #F1EAD8;
+$color-sand: #D5C7AD;
+$color-olive: #BEC5A4;
+$color-sage: #8A8E75;
+$color-bark: #68604D;
+$color-olivewood: #2D2F22;
+$color-gold: #C9A86A;
+
+$border-light: rgba(255,255,255,0.2);
+$border-dark: rgba(61,72,53,0.2);
+$border-gold: rgba(201,168,106,0.4);
+
+$shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+$shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+$shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+$shadow-xl: 0 12px 40px rgba(0,0,0,0.15);
+$shadow-gold: 0 0 30px rgba(201,168,106,0.2);
+
+$font-serif: 'Cormorant Garamond', Georgia, serif;
+$font-script: $font-serif;
+$font-sans: 'Inter', sans-serif;
+
+$font-size-h1: 4rem;
+$font-size-h2: 3.5rem;
+$font-size-h3: 3rem;
+$font-size-h4: 2.5rem;
+$font-size-h5: 2rem;
+$font-size-h6: 1.5rem;
+$font-size-body-lg: 1.25rem;
+$font-size-body: 1rem;
+$font-size-body-sm: 0.875rem;
+$font-size-caption: 0.75rem;
+$font-size-countdown: 5rem;
+
+$font-size-h2-mobile: 2rem;
+$font-size-countdown-mobile: 3.5rem;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.7;
+
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.05em;
+$letter-spacing-widest: 0.2em;
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+$spacing-xl: 6rem;
+
+$gap-xs: 8px;
+$gap-sm: 16px;
+$gap-md: 24px;
+$gap-lg: 32px;
+$gap-xl: 40px;
+
+$section-padding-desktop: 120px 64px;
+$section-padding-mobile: 80px 24px;
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-pill: 60px;
+$radius-circle: 50%;
+
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1024px;
+$wide: 1440px;

@@ -1,0 +1,84 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.message-section {
+  min-height: 80vh;
+  background: $bg-parchment;
+  padding: $section-padding-desktop;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    padding: $section-padding-mobile;
+    min-height: auto;
+  }
+}
+
+.message-container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.message-title {
+  font-family: $font-script;
+  font-size: $font-size-h1;
+  color: $text-on-light;
+  margin: 0 0 60px 0;
+
+  @include mobile {
+    font-size: $font-size-h2;
+    margin-bottom: 48px;
+  }
+}
+
+.message-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px;
+  background: $bg-white;
+  border: 3px solid $gold-light;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-lg;
+
+  p {
+    font-family: $font-sans;
+    font-size: $font-size-body-lg;
+    font-weight: $font-weight-light;
+    color: $text-on-light;
+    line-height: $line-height-relaxed;
+    margin: 0 0 24px 0;
+
+    &:first-child {
+      font-weight: $font-weight-medium;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mobile {
+    padding: 40px 32px;
+    border-radius: $radius-lg;
+
+    p {
+      font-size: $font-size-body;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.message-signature {
+  font-family: $font-script;
+  font-size: 2rem;
+  color: $gold-primary;
+  margin-top: 40px;
+
+  @include mobile {
+    font-size: 1.75rem;
+    margin-top: 32px;
+  }
+}

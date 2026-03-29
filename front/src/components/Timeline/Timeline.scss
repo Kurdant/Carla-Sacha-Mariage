@@ -1,0 +1,240 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.timeline-section {
+  min-height: 100vh;
+  background: $bg-parchment;
+  padding: $section-padding-desktop;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: 80px;
+    height: 80px;
+    border-top: 3px solid $gold-light;
+    border-left: 3px solid $gold-light;
+    border-radius: 8px 0 0 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    width: 80px;
+    height: 80px;
+    border-bottom: 3px solid $gold-light;
+    border-right: 3px solid $gold-light;
+    border-radius: 0 0 8px 0;
+  }
+
+  @include mobile {
+    padding: $section-padding-mobile;
+
+    &::before,
+    &::after {
+      width: 60px;
+      height: 60px;
+    }
+
+    &::before {
+      top: 40px;
+      left: 40px;
+    }
+
+    &::after {
+      bottom: 40px;
+      right: 40px;
+    }
+  }
+}
+
+.timeline-header {
+  text-align: center;
+  margin-bottom: 80px;
+
+  @include mobile {
+    margin-bottom: 60px;
+  }
+}
+
+.timeline-title {
+  font-family: $font-script;
+  font-size: $font-size-h2;
+  color: $text-on-light;
+  margin: 0;
+  position: relative;
+  padding-bottom: 24px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(135deg, $gold-primary, $gold-secondary);
+    border-radius: 2px;
+  }
+
+  @include mobile {
+    font-size: $font-size-h2-mobile;
+  }
+}
+
+.timeline-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      $gold-primary 10%,
+      $gold-primary 90%,
+      transparent
+    );
+    transform: translateX(-50%);
+  }
+
+  @include mobile {
+    &::before {
+      left: 32px;
+      transform: translateX(0);
+    }
+  }
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: center;
+
+  &:nth-child(even) {
+    .timeline-content {
+      grid-column: 3;
+      text-align: left;
+    }
+
+    .timeline-time {
+      grid-column: 1;
+      text-align: right;
+    }
+  }
+
+  &:nth-child(odd) {
+    .timeline-content {
+      grid-column: 1;
+      text-align: right;
+    }
+
+    .timeline-time {
+      grid-column: 3;
+      text-align: left;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+
+    &:nth-child(even),
+    &:nth-child(odd) {
+      .timeline-content {
+        grid-column: 2;
+        text-align: left;
+      }
+
+      .timeline-time {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: left;
+      }
+    }
+
+    .timeline-icon {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+  }
+}
+
+.timeline-icon {
+  grid-column: 2;
+  width: 64px;
+  height: 64px;
+  background: $bg-white;
+  border: 3px solid $gold-primary;
+  border-radius: $radius-circle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: $shadow-md;
+  z-index: 2;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.15);
+    box-shadow: $shadow-gold;
+  }
+
+  @include mobile {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+}
+
+.timeline-time {
+  font-family: $font-sans;
+  font-size: $font-size-body-lg;
+  font-weight: $font-weight-semibold;
+  color: $gold-primary;
+  letter-spacing: $letter-spacing-wide;
+
+  @include mobile {
+    font-size: $font-size-body-sm;
+  }
+}
+
+.timeline-content {
+  h3 {
+    font-family: $font-sans;
+    font-size: $font-size-h6;
+    font-weight: $font-weight-semibold;
+    color: $text-on-light;
+    margin: 0 0 8px 0;
+  }
+
+  p {
+    font-size: $font-size-body;
+    color: rgba(61,72,53,0.7);
+    font-style: italic;
+    margin: 0;
+  }
+
+  @include mobile {
+    h3 {
+      font-size: $font-size-body-lg;
+    }
+
+    p {
+      font-size: $font-size-body-sm;
+    }
+  }
+}

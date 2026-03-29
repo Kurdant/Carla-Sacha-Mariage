@@ -1,0 +1,133 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.dress-code-section-premium {
+  min-height: 100vh;
+  background: $bg-sage;
+  background-image:
+    linear-gradient(30deg, transparent 45%, rgba(255,255,255,0.03) 45%, rgba(255,255,255,0.03) 55%, transparent 55%),
+    linear-gradient(-30deg, transparent 45%, rgba(255,255,255,0.03) 45%, rgba(255,255,255,0.03) 55%, transparent 55%);
+  background-size: 100px 100px;
+  padding: $section-padding-desktop;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile {
+    padding: $section-padding-mobile;
+  }
+}
+
+.dress-code-container {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.dress-code-title {
+  font-family: $font-script;
+  font-size: $font-size-h2;
+  color: $text-on-dark;
+  margin: 0 0 40px 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+  @include mobile {
+    font-size: $font-size-h2-mobile;
+    margin-bottom: 32px;
+  }
+}
+
+.dress-code-intro {
+  font-family: $font-sans;
+  font-size: $font-size-body-lg;
+  font-weight: $font-weight-light;
+  color: $text-on-dark;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: $line-height-relaxed;
+  font-style: italic;
+
+  @include mobile {
+    font-size: $font-size-body;
+    margin-bottom: 48px;
+  }
+}
+
+.color-palette-premium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: $gap-lg;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+
+  @include mobile {
+    gap: $gap-md;
+    margin-bottom: 48px;
+  }
+}
+
+.color-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+
+  @include mobile {
+    gap: 12px;
+  }
+}
+
+.color-circle-premium {
+  width: 80px;
+  height: 80px;
+  border-radius: $radius-circle;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+
+  @include mobile {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.color-label {
+  font-family: $font-sans;
+  font-size: $font-size-body-sm;
+  font-weight: $font-weight-medium;
+  color: $text-on-dark;
+  text-transform: capitalize;
+  letter-spacing: $letter-spacing-wide;
+
+  @include mobile {
+    font-size: $font-size-caption;
+  }
+}
+
+.dress-code-footer {
+  text-align: center;
+  padding: 32px 48px;
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: $radius-pill;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: $font-sans;
+  font-size: $font-size-body-lg;
+  font-weight: $font-weight-medium;
+  color: $text-on-dark;
+  line-height: $line-height-normal;
+
+  @include mobile {
+    padding: 24px 32px;
+    font-size: $font-size-body;
+  }
+}
